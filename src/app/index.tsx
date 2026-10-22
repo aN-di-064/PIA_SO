@@ -31,9 +31,9 @@ export default function BootScreen() {
       onPanResponderRelease: (e: GestureResponderEvent, gesture: PanResponderGestureState) => {
         pan.flattenOffset();
         
-        // Si el usuario arrastró el disco hacia la bandeja
+        // Si el usuario arrastra el disco hacia la bandeja
         if (gesture.dy > 180) {
-          // Anima el disco para que sea "succionado" al centro de la bandeja
+          // Anima el disco para que sea introducido al centro de la bandeja
           Animated.timing(pan, {
             toValue: { x: 0, y: 250 },
             duration: 300,
@@ -45,7 +45,7 @@ export default function BootScreen() {
             }, 300);
           });
         } else {
-          // Si no lo arrastró lo suficiente, rebota a su lugar original
+          // Si no es arrastrado lo suficiente, regresa el disco a su posición original
           Animated.spring(pan, {
             toValue: { x: 0, y: 0 },
             useNativeDriver: false,
@@ -60,7 +60,7 @@ export default function BootScreen() {
     <View style={styles.container}>
       <Text style={styles.instructions}>Inserta el disco para iniciar</Text>
 
-      {/* 1. EL DISCO */}
+      {/* Imagen de disco del SO */}
       <Animated.View
         style={[
           styles.discContainer,
@@ -74,7 +74,7 @@ export default function BootScreen() {
         />
       </Animated.View>
 
-      {/* 2. LA BANDEJA */}
+      {/* Bandeja de entrada. puede cambiar en el futuro */}
       <View style={styles.trayContainer}>
         <View style={styles.tray}>
           <View style={styles.slot} />
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     width: 140,
     height: 140,
     resizeMode: 'contain',
-    borderRadius: 70, // Oculta las esquinas blancas del JPG
+    borderRadius: 70, 
   },
   trayContainer: {
     position: 'absolute',
