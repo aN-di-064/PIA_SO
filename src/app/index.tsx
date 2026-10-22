@@ -19,7 +19,7 @@ export default function IndexScreen() {
     <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.header}>
-          <Text style={styles.title}>Índice de Temas</Text>
+          <Text style={styles.title}>Chrome OS</Text>
         </View>
 
         <View style={styles.hubContainer}>
