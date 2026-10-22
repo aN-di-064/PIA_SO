@@ -1,11 +1,11 @@
 import { Image, SafeAreaView, ScrollView, Text, View } from "react-native";
 import { styles } from "../styles/temas";
 
-// 1. Definimos los bloques de infrormación
-export interface BloqueContenido {
-  tipo: 'texto' | 'imagen' | 'subtitulo';
-  contenido: string;
-}
+// Definimos los bloques de infrormación
+export type BloqueContenido = 
+  | { tipo: 'texto' | 'imagen' | 'subtitulo'; contenido: string }
+  | { tipo: 'lista'; contenido: string[] };
+
 
 // estructura completa del tema
 export interface TemaData {
@@ -39,6 +39,19 @@ export default function TemaTemplate({ data }: TemaTemplateProps) {
           if (bloque.tipo === 'subtitulo') {
             return <Text key={index} style={styles.sectionHeader}>{bloque.contenido}</Text>;
           }
+
+          if (bloque.tipo === 'lista' && Array.isArray(bloque.contenido)) {
+         return (
+            <View key={index} style={styles.listContainer}>
+             {bloque.contenido.map((item, i) => (
+              <View key={i} style={styles.bulletRow}>
+            <Text style={styles.bullet}>•</Text>
+            <Text style={styles.bulletText}>{item}</Text>
+        </View>
+      ))}
+    </View>
+  );
+}
           
           return null; 
         })}

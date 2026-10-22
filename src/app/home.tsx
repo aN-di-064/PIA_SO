@@ -6,7 +6,7 @@ const topics = [
   { id: "historia", title: "Historia de los Sistemas Operativos" },
   { id: "Arquitectura", title: "Arquitectura y Estructura" },
   { id: "concurrencia", title: "Procesos y Concurrencia" },
-  { id: "memoria", title: "Gestión de Memoria" },
+  { id: "gestion", title: "Gestión de Memoria" },
   { id: "seguridad", title: "Sistemas de Archivos y Seguridad" },
   { id: "redes", title: "Redes y Sistemas Distribuidos" },
   { id: "conclusion", title: "Conclusión" },

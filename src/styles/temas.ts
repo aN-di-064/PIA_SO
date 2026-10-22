@@ -55,4 +55,26 @@ export const styles = StyleSheet.create({
     height: "100%",
     resizeMode: "contain",
   },
+
+listContainer: {
+    marginVertical: 10,
+    paddingHorizontal: 15,
+  },
+  bulletRow: {
+    flexDirection: 'row',
+    marginBottom: 8,
+    alignItems: 'flex-start', // Mantiene el punto anclado a la primera línea del texto
+  },
+  bullet: {
+    fontSize: 18,
+    width: 20, // le da un ancho fijo al punto para que actúe como un muro
+    color: '#333',
+    marginTop: -2,
+  },
+  bulletText: {
+    fontSize: 16,
+    color: '#333',
+    flex: 1, // Obliga al texto a seguir el muro de la viñeta y romperse en múltiples renglones
+    lineHeight: 24,
+  },
 });
