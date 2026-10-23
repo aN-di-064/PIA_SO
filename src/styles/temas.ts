@@ -30,6 +30,7 @@ export const styles = StyleSheet.create({
     lineHeight: 24,
     marginBottom: 16,
     fontStyle: "normal",
+    textAlign: 'justify',
   },
   quoteText: {
     fontSize: 14,
@@ -76,5 +77,6 @@ listContainer: {
     color: '#333',
     flex: 1, // Obliga al texto a seguir el muro de la viñeta y romperse en múltiples renglones
     lineHeight: 24,
+    textAlign: 'justify',
   },
 });

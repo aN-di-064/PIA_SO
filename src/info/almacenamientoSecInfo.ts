@@ -1,0 +1,20 @@
+import type { TemaData } from "../componentes/PlantillaTema";
+
+export const almacenamientoSecData: TemaData = {
+  id: "almacenamientoSec",
+  titulo: "Almacenamiento Secundario y Tecnologías de Persistencia",
+  bloques: [
+    {
+        tipo: "texto",
+        contenido: "El almacenamiento secundario tiene como función física fundamental que nos asegura la permanencia indefinida de las instrucciones del sistema operativo, las bibliotecas compartidas y los datos de las aplicaciones a la naturaleza volátil de la memoria de acceso aleatorio. Desde una perspectiva arquitectónica tradicional, los medios masivos dependían de discos duros magnéticos HDD, cuya estructura electromecánica impone restricciones severas en el tiempo total de respuesta. En estos dispositivos, el acceso a los datos comprende el tiempo de búsqueda para mover físicamente el brazo mecánico hacia la pista correspondiente, la latencia rotacional requerida para que el sector objetivo pase por debajo del cabezal, y el tiempo de transferencia del flujo magnético hacia el búfer del controlador. Con el fin de reducir estos cuellos de botella mecánicos, los núcleos clásicos implementaron planificadores de disco basados en algoritmos como SSTF, SCAN o C-SCAN que limpia la superficie en un único sentido y regresa velozmente al inicio sin atender peticiones intermedias, asegurando un tiempo de espera más uniforme." 
+    },
+    {
+        tipo: "texto",
+        contenido: "También por otro lado con dicho paradigma, los ecosistemas orientados a la computación ligera y la movilidad, representados por Chrome OS y la gama de dispositivos Chromebook, prescinden de componentes mecánicos para adoptar de manera exclusiva tecnologías de estado sólido basadas en silicio, tales como chips eMMC y unidades SSD con interfaz NVMe. Estas unidades sustentan su persistencia en matrices de compuertas flotantes o celdas de trampa de carga dentro de arquitecturas flash NAND (SLC, MLC, TLC o QLC), logrando tiempos de acceso casi planos y uniformes sin importar la ubicación del bloque lógico solicitado." 
+    },
+    {
+        tipo: "texto",
+        contenido: "A pesar de ofrecer rendimientos de lectura y escritura completa de superiores, el almacenamiento flash establece restricciones físicas complejas que el subsistema de Entrada/Salida del sistema operativo debe coordinar. La asimetría operativa de las celdas NAND exige que las operaciones de lectura y escritura se ejecuten a nivel de páginas individuales, mientras que las operaciones de borrado requieren descargar bloques completos compuestos por decenas o cientos de páginas. Esta propiedad provoca el fenómeno de amplificación de escritura, en el cual reescribir un dato pequeño obliga a reubicar y reescribir bloques completos contiguos. Para evitar la degradación prematura del silicio debida al desgaste electroquímico por ciclos continuos de borrado y escritura, los microcontroladores internos de las unidades de estado sólido implementan rutinas avanzadas de nivelación de desgaste, tanto dinámicas como estáticas, las cuales distribuyen el flujo de escrituras de manera balanceada en todas las celdas físicas del medio.   Para optimizar esta interacción entre el hardware de estado sólido y el sistema de archivos del núcleo, el sistema operativo recurre a la instrucción estandarizada TRIM en interfaces SATA/NVMe. En condiciones normales, cuando un usuario o un proceso borra un archivo, el sistema de archivos simplemente desasocia los metadatos o marca los bloques como libres en sus estructuras de control, pero no borra la información física del soporte. Mediante TRIM, el kernel notifica directamente y proactiva al controlador de la memoria flash qué regiones de bloques lógicos ya no albergan datos válidos. De este modo, los procesos internos de recolección de basura de la unidad pueden limpiar y pre-borrar físicamente esos bloques durante periodos_de inactividad_de Entrada/Salida, asegurando que las solicitudes_de escritura posteriores encuentren bloques listos para su uso sin incurrir en penalizaciones_de latencia adicionales."
+    }
+  ]
+}

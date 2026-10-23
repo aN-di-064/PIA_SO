@@ -7,14 +7,13 @@ const topics = [
   { id: "Arquitectura", title: "Arquitectura y Estructura" },
   { id: "concurrencia", title: "Procesos y Concurrencia" },
   { id: "gestion", title: "Gestión de Memoria" },
-  { id: "seguridad", title: "Sistemas de Archivos y Seguridad" },
-  { id: "redes", title: "Redes y Sistemas Distribuidos" },
+  { id: "seguridad", title: "Seguridad y Redes" },
   { id: "conclusion", title: "Conclusión" },
   { id: "bibliografia", title: "Bibliografía" },
   { id: "acerca", title: "Acerca de" },
 ] as const;
 
-export default function HomeScreen() {
+export default function ÍndiceScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
