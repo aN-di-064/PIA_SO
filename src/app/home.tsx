@@ -4,7 +4,7 @@ import { styles } from "../styles/index.styles";
 
 const topics = [
   { id: "historia", title: "Historia de los Sistemas Operativos" },
-  { id: "Arquitectura", title: "Arquitectura y Estructura" },
+  { id: "arquitectura", title: "Arquitectura, componentes y diseño" }, // <-- Actualizado aquí
   { id: "concurrencia", title: "Procesos y Concurrencia" },
   { id: "gestion", title: "Gestión de Memoria" },
   { id: "seguridad", title: "Seguridad y Redes" },
