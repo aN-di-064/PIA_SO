@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   },
   tray: {
     width: 280,
-    height: 80,
+    height: 200,
     backgroundColor: '#333',
     borderRadius: 10,
     alignItems: 'center',
