@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import {
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 export interface EventoHistoria {
@@ -44,7 +44,6 @@ export default function PlantillaLineaTiempo({
 
           {eventos.map((item, index) => {
             const isOpen = eventoSeleccionado === item.id;
-            const isLeft = index % 2 === 0; // Alternar lado izquierdo/derecho en pantallas anchas
 
             return (
               <View key={item.id} style={styles.itemContainer}>
@@ -64,7 +63,7 @@ export default function PlantillaLineaTiempo({
                 {/* Tarjeta de información (se muestra expandida si isOpen es true) */}
                 {isOpen && (
                   <View style={styles.card}>
-                    <Text style={styles.cardYear}>{item.anio}</Text>
+                    {/* Se removió la línea del año para que solo aparezca en la bola negra */}
                     <Text style={styles.cardTitle}>{item.titulo}</Text>
                     <Text style={styles.cardDescription}>
                       {item.descripcion}
@@ -158,12 +157,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 6,
     elevation: 3,
-  },
-  cardYear: {
-    fontSize: 12,
-    fontWeight: "bold",
-    color: "#2563EB",
-    marginBottom: 4,
   },
   cardTitle: {
     fontSize: 16,
