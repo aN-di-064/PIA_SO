@@ -29,11 +29,14 @@ export default function PortadaScreen() {
           </View>
         </View>
 
-        {/* TÍTULOS DEL PROYECTO */}
+       {/* TÍTULOS DEL PROYECTO */}
         <View style={styles.titlesContainer}>
           <Text style={styles.materiaText}>Sistemas Operativos</Text>
           <Text style={styles.reportTitle}>Reporte de Sistema Operativo</Text>
           <Text style={styles.subReportTitle}>Chrome OS</Text>
+          
+          {/* Aquí agregas la versión */}
+          <Text style={styles.versionText}>Versión: Chrome OS Flex (130 - estable)</Text>
         </View>
 
         {/* BLOQUE DE DATOS */}
@@ -127,10 +130,16 @@ headerContainer: {
     fontSize: 22,
     fontWeight: 'bold',
   },
-  subReportTitle: {
+ subReportTitle: {
     color: '#5B9BD5',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  versionText: {
+    color: '#888888', 
+    fontSize: 14,
+    fontStyle: 'italic',
+    marginTop: 5, // Lo separa un poquito del título "Chrome OS"
   },
   infoBlock: {
     width: '100%',
