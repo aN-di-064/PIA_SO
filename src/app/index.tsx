@@ -1,148 +1,176 @@
-import { useRouter } from 'expo-router';
-import { useRef } from 'react';
-import {
-  Animated,
-  GestureResponderEvent,
-  Image,
-  PanResponder,
-  PanResponderGestureState,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { Link } from "expo-router";
+import { Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 
-export default function BootScreen() {
-  const router = useRouter();
-  const pan = useRef(new Animated.ValueXY()).current;
-
-  const panResponder = useRef(
-    PanResponder.create({
-      onMoveShouldSetPanResponder: () => true,
-      onPanResponderGrant: () => {
-        pan.setOffset({
-          x: (pan.x as any)._value,
-          y: (pan.y as any)._value,
-        });
-      },
-      onPanResponderMove: Animated.event(
-        [null, { dx: pan.x, dy: pan.y }],
-        { useNativeDriver: false } 
-      ),
-      onPanResponderRelease: (e: GestureResponderEvent, gesture: PanResponderGestureState) => {
-        pan.flattenOffset();
-        
-        // Si el usuario arrastra el disco hacia la bandeja
-        if (gesture.dy > 180) {
-          // Anima el disco para que sea introducido al centro de la bandeja
-          Animated.timing(pan, {
-            toValue: { x: 0, y: 250 },
-            duration: 300,
-            useNativeDriver: false,
-          }).start(() => {
-            // Transición al menú principal (home.tsx)
-            setTimeout(() => {
-              router.replace('/home');
-            }, 300);
-          });
-        } else {
-          // Si no es arrastrado lo suficiente, regresa el disco a su posición original
-          Animated.spring(pan, {
-            toValue: { x: 0, y: 0 },
-            useNativeDriver: false,
-            friction: 5,
-          }).start();
-        }
-      },
-    })
-  ).current;
-
+export default function PortadaScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.instructions}>Inserta el disco para iniciar</Text>
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
+        
+   {/* ENCABEZADO */}
+<View style={styles.headerContainer}>
+          {/*Logos en el renglón superior */}
+          <View style={styles.logosRow}>
+            <Image 
+              source={require('../../assets/images/tabIcons/UANL-Logo.png')} 
+              style={styles.logoUANL} 
+              resizeMode="contain"
+            />
+            <Image 
+              source={require('../../assets/images/tabIcons/fime-logo-negro.png')} 
+              style={styles.logoFIME} 
+              resizeMode="contain"
+            />
+          </View>
 
-      {/* Imagen de disco del SO */}
-      <Animated.View
-        style={[
-          styles.discContainer,
-          { transform: [{ translateX: pan.x }, { translateY: pan.y }] }
-        ]}
-        {...panResponder.panHandlers}
-      >
-        <Image 
-          source={require('../../assets/images/tabIcons/1000209717.png')}
-          style={styles.discImage} 
-        />
-      </Animated.View>
-
-      {/* Bandeja de entrada. puede cambiar en el futuro */}
-      <View style={styles.trayContainer}>
-        <View style={styles.tray}>
-          <View style={styles.slot} />
-          <Text style={styles.trayText}>BANDEJA DE ENTRADA</Text>
+          {/*Textos institucionales debajo de los logos */}
+          <View style={styles.headerTextContainer}>
+            <Text style={styles.headerTextBold}>Universidad Autónoma de Nuevo León</Text>
+            <Text style={styles.headerTextBold}>Facultad de Ingeniería Mecánica y Eléctrica</Text>
+          </View>
         </View>
-      </View>
-    </View>
+
+        {/* TÍTULOS DEL PROYECTO */}
+        <View style={styles.titlesContainer}>
+          <Text style={styles.materiaText}>Sistemas Operativos</Text>
+          <Text style={styles.reportTitle}>Reporte de Sistema Operativo</Text>
+          <Text style={styles.subReportTitle}>Chrome OS</Text>
+        </View>
+
+        {/* BLOQUE DE DATOS */}
+        <View style={styles.infoBlock}>
+          <Text style={styles.infoLine}><Text style={styles.bold}>Equipo:</Text> 3</Text>
+          <Text style={styles.infoLine}><Text style={styles.bold}>Grupo:</Text> 006</Text>
+          <Text style={styles.infoLine}><Text style={styles.bold}>Día:</Text> LMV</Text>
+          <Text style={styles.infoLine}><Text style={styles.bold}>Hora:</Text> M6</Text>
+          <Text style={styles.infoLine}><Text style={styles.bold}>Catedrático:</Text> Dra. Norma Edith Marín Martínez</Text>
+          <Text style={styles.infoLine}><Text style={styles.bold}>Fecha de entrega:</Text> 23 de Octubre 2026</Text>
+        </View>
+
+        {/* TABLAS DE INTEGRANTES (Imágenes) */}
+        <Image 
+          source={require('../../assets/images/tabIcons/integrantes1.png')} 
+          style={styles.tablaGrande} 
+          resizeMode="contain"
+        />
+
+        <Image 
+          source={require('../../assets/images/tabIcons/integrantes2.png')} 
+          style={styles.tablaPequena} 
+          resizeMode="contain"
+        />
+
+        <Text style={styles.lugarText}>Lugar San Nicolás de los Garza, Nuevo León</Text>
+
+        {/* BOTÓN PARA IR AL ÍNDICE */}
+        <Link href="/disco" style={styles.button}>
+          <Text style={styles.buttonText}>Entrar al Proyecto</Text>
+        </Link>
+
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
+    backgroundColor: '#FFFFFF', // Color de fondo oscuro de tu documento
+  },
+  container: {
+    padding: 20,
+    alignItems: 'center', // Centra todo el contenido verticalmente por defecto
+  },
+ // Estilos para el encabezado
+headerContainer: {
     width: '100%',
     alignItems: 'center',
-    backgroundColor: '#f4f4f4',
+    marginBottom: 40,
+    paddingTop: 0,
   },
-  instructions: {
-    color: '#555',
-    marginTop: 80,
+  logosRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-around', 
+    width: '100%',
+    paddingHorizontal: 20,
+    marginBottom: -10, 
+  },
+  logoUANL: {
+    width: 120,
+    height: 80, 
+  },
+  logoFIME: {
+    width: 140,
+    height: 70, 
+  },
+  headerTextContainer: {
+    width: '100%',
+  },
+  headerTextBold: {
+    color: '#1E1E1E', // Mantengo el color oscuro que se ve en tu captura
+    fontSize: 20, 
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 8,
+  },
+  titlesContainer: {
+    alignItems: 'center',
+    marginBottom: 40,
+  },
+  materiaText: {
+    color: '#1E1E1E',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 30,
+  },
+  reportTitle: {
+    color: '#5B9BD5', 
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+  subReportTitle: {
+    color: '#5B9BD5',
     fontSize: 18,
     fontWeight: 'bold',
   },
-  discContainer: {
-    position: 'absolute',
-    top: 180,
-    zIndex: 1, 
-    left: '50%',
-    marginLeft: -70,
-  },
-  discImage: {
-    width: 140,
-    height: 140,
-    resizeMode: 'contain',
-    borderRadius: 70, 
-  },
-  trayContainer: {
-    position: 'absolute',
-    top: 420,
-    zIndex: 2,
+  infoBlock: {
     width: '100%',
     alignItems: 'center',
-    left: 0,
-    right: 0,
+    marginBottom: 40,
   },
-  tray: {
-    width: 280,
-    height: 200,
-    backgroundColor: '#333',
-    borderRadius: 10,
-    alignItems: 'center',
-    paddingTop: 15,
-    elevation: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: -2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 5,
+  infoLine: {
+    color: '#1E1E1E',
+    fontSize: 14,
+    marginBottom: 5,
   },
-  slot: {
-    width: 220,
-    height: 8,
-    backgroundColor: '#111',
-    borderRadius: 4,
-    marginBottom: 12,
+  bold: {
+    fontWeight: 'bold',
   },
-  trayText: {
-    color: '#888',
-    letterSpacing: 2,
-    fontSize: 12,
+ tablaGrande: {
+    width: '100%',
+    height: 400, 
+    marginBottom: -25, // Acerca la segunda tabla
   },
+  tablaPequena: {
+    width: '100%',
+    height: 150, 
+    marginBottom: 40,
+  },
+  lugarText: {
+    color: '#1E1E1E',
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginBottom: 40,
+  },
+  button: {
+    backgroundColor: '#007BFF',
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+    borderRadius: 8,
+    marginBottom: 20,
+  },
+  buttonText: {
+    color: '#1E1E1E',
+    fontSize: 16,
+    fontWeight: 'bold',
+  }
 });
