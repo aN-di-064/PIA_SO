@@ -14,7 +14,7 @@ export interface TemaData {
   bloques: BloqueContenido[];
 }
 
-// 3. Le decimos a la plantilla que "data" debe cumplir con la estructura TemaData
+// Le decimos a la plantilla que "data" debe cumplir con la estructura TemaData
 interface TemaTemplateProps {
   data: TemaData;
 }
