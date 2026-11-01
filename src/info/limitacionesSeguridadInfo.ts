@@ -34,11 +34,6 @@ export const limitacionesSeguridadData: TemaData = {
         "Amplitud de permisos: Una extensión con el permiso “read and change all your data on the websites you visit” puede leer el texto que se escribe en los formularios, interceptar tokens de autenticación y modificar elementos visuales de la página sin necesidad de vulnerar el sistema operativo.",
       ],
     },
-    // Agregar cuando se tenga una URL válida para la imagen (Ilustración 33: Panel de gestión de permisos y advertencia de extensiones en Chrome Web Store):
-    // {
-    //   tipo: "imagen",
-    //   contenido: "URL_DE_LA_IMAGEN",
-    // },
     {
       tipo: "subtitulo",
       contenido: "4.12.4 Redes inseguras y ataques de capa 2",

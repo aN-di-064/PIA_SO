@@ -49,11 +49,7 @@ export const mecanismosChromeOSData: TemaData = {
         "cgroups (Control Groups): Limitan el consumo de CPU, memoria y ancho de banda para evitar ataques locales de denegación de servicio.",
       ],
     },
-    // Agregar cuando se tenga una URL válida para la imagen (Ilustración 29: Aislamiento multinivel de procesos en ChromeOS (Renderer, Namespaces, seccomp-BPF y ARCVM)):
-    // {
-    //   tipo: "imagen",
-    //   contenido: "URL_DE_LA_IMAGEN",
-    // },
+
     {
       tipo: "subtitulo",
       contenido: "4.8.3 Actualizaciones automáticas de seguridad",
@@ -70,11 +66,6 @@ export const mecanismosChromeOSData: TemaData = {
         "Reversión instantánea (Rollback Protection): Si la nueva partición falla en la verificación criptográfica del arranque o cae en un ciclo de fallos de inicio (boot loop), el hardware y el bootloader regresan automáticamente a la partición anterior que sí funcionaba (A). Además, el chip de seguridad impide volver a versiones vulnerables más viejas gracias a contadores de versión anti-rollback por hardware.",
       ],
     },
-    // Agregar cuando se tenga una URL válida para la imagen (Ilustración 30: Esquema de actualización simétrica con particiones redundantes A/B en el almacenamiento):
-    // {
-    //   tipo: "imagen",
-    //   contenido: "URL_DE_LA_IMAGEN",
-    // },
     {
       tipo: "subtitulo",
       contenido: "4.8.4 Navegación segura (Safe Browsing)",
@@ -139,10 +130,5 @@ export const mecanismosChromeOSData: TemaData = {
         "Protección contra ataques de fuerza bruta: El chip lleva por hardware el conteo de intentos fallidos de contraseña y PIN. Si detecta varios intentos incorrectos seguidos, impone retrasos temporales que crecen de forma exponencial (rate limiting) o bloquea ese método de acceso, con lo que los ataques automatizados de diccionario dejan de ser efectivos.",
       ],
     },
-    // Agregar cuando se tenga una URL válida para la imagen (Ilustración 31: Panel de administración de redes y perfiles Wi-Fi en ChromeOS):
-    // {
-    //   tipo: "imagen",
-    //   contenido: "URL_DE_LA_IMAGEN",
-    // },
   ],
 };

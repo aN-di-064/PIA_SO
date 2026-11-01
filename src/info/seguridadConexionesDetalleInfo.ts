@@ -24,11 +24,6 @@ export const seguridadConexionesDetalleData: TemaData = {
       tipo: "texto",
       contenido: "Un certificado digital relaciona una clave pública con una entidad o dominio web específico, siguiendo el estándar X.509. ChromeOS cuenta con un almacén raíz de certificados de confianza (Root CA Store) que administra Chrome. Durante el protocolo de enlace TLS (TLS Handshake), el sistema revisa la cadena de confianza, la vigencia, los nombres de dominio alternativos (SAN) y si el certificado fue revocado, para lo cual usa protocolos como CRL u OCSP Stapling. Cuando la validación falla (por ejemplo, con un certificado autofirmado que no se reconoce, vencido o alterado), ChromeOS corta la conexión y muestra una advertencia de seguridad que impide continuar, con el fin de evitar ataques de interceptación.",
     },
-    // Agregar cuando se tenga una URL válida para la imagen (Ilustración 26: Inspección de certificado digital TLS X.509):
-    // {
-    //   tipo: "imagen",
-    //   contenido: "URL_DE_LA_IMAGEN",
-    // },
     {
       tipo: "subtitulo",
       contenido: "4.7.2 Cifrado de comunicaciones y protección de datos durante la transmisión",
@@ -46,11 +41,6 @@ export const seguridadConexionesDetalleData: TemaData = {
         "Aleatorización de direcciones MAC: En redes inalámbricas no administradas, el subsistema de red de ChromeOS (shill) puede ir cambiando la dirección MAC con la que se asocia al punto de acceso. Esto evita que el equipo sea rastreado en redes públicas, tanto por su ubicación como a lo largo del tiempo.",
       ],
     },
-    // Agregar cuando se tenga una URL válida para la imagen (Ilustración 27: Arquitectura de túnel seguro mediante VPN y resolución DNS sobre HTTPS (DoH)):
-    // {
-    //   tipo: "imagen",
-    //   contenido: "URL_DE_LA_IMAGEN",
-    // },
     {
       tipo: "subtitulo",
       contenido: "4.7.3 Redes privadas virtuales (VPN)",
