@@ -18,5 +18,9 @@ export const clasificacionEstructuralData: TemaData = {
         "Por el Número de Procesadores (Multiprocesamiento Simétrico - SMP): Es compatible con arquitecturas de múltiples núcleos, distribuyendo los hilos de ejecución de manera equilibrada entre los distintos núcleos físicos y lógicos de la computadora.",
       ],
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/tab2.png')
+    },
   ],
 };

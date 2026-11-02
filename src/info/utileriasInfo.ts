@@ -16,5 +16,9 @@ export const utileriasData: TemaData = {
         "Administrador de Tareas Nativo (Shift + Esc): A diferencia de los administradores tradicionales, esta herramienta supervisa de manera transparente y detallada el consumo exacto de memoria RAM, porcentaje de CPU, uso de red y procesos activos de cada pestaña del navegador, cada extensión instalada y cada contenedor virtual, facilitando el cierre inmediato de procesos que consuman demasiados recursos.",
       ],
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/1.8.png')
+    },
   ],
 };

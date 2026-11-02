@@ -26,6 +26,10 @@ export const componentesPrincipalesData: TemaData = {
       ],
     },
     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/1.3cpu.png')
+    },
+    {
       tipo: "subtitulo",
       contenido: "1.3.2. Gestión de Memoria Principal y Virtual",
     },
@@ -41,6 +45,10 @@ export const componentesPrincipalesData: TemaData = {
         "zRAM (Compresión en RAM): Cuando la memoria física comienza a llenarse, los sistemas tradicionales guardan datos en el disco de almacenamiento. ChromeOS evita esto porque escribir constantemente en memorias flash genera desgaste. En su lugar, utiliza zRAM, un mecanismo que toma las páginas de memoria poco usadas, las comprime y las mantiene dentro de la propia memoria RAM para recuperar espacio libre de inmediato.",
         "Suspensión de pestañas: Si el consumo de RAM llega a niveles críticos, el servicio encargado de los recursos suspende de forma automática las pestañas que no se han consultado en mucho tiempo, manteniendo guardado el estado de la página para cuando el usuario regrese.",
       ],
+    },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/1.4zram.png')
     },
     {
       tipo: "subtitulo",
@@ -63,6 +71,10 @@ export const componentesPrincipalesData: TemaData = {
         "Integridad por Bloques (dm-verity): Cada vez que el sistema lee un archivo del disco hacia la RAM, el kernel calcula y verifica un árbol de firmas criptográficas. Si un solo bit de los archivos del sistema ha sido alterado, la lectura se bloquea al instante.",
         "Aislamiento de Datos de Usuario (Cryptohome): La información personal del usuario no se mezcla con los archivos del sistema. Cada cuenta se almacena en una partición independiente y totalmente cifrada mediante claves vinculadas al chip de seguridad físico del equipo (como el módulo TPM o el chip Titan).",
       ],
+    },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/1.6aislamiento.png')
     },
   ],
 };

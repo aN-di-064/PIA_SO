@@ -10,6 +10,10 @@ export const disenoSistemasData: TemaData = {
         "Cuando analizamos el software que hace funcionar una computadora, solemos pensar en sistemas tradicionales instalados por completo en el almacenamiento local, los cuales actúan como la capa de abstracción definitiva entre el hardware físico y las aplicaciones del usuario. Sin embargo, con la evolución de la tecnología hacia la informática en la nube y la necesidad de equipos más ligeros para entornos educativos y empresariales, han surgido arquitecturas especializadas como ChromeOS.",
     },
     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/1.1chromeOs.png')
+    },
+    {
       tipo: "subtitulo",
       contenido: "El enfoque minimalista de ChromeOS",
     },

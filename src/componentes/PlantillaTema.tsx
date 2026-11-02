@@ -3,8 +3,9 @@ import { styles } from "../styles/temas";
 
 // Definimos los bloques de infrormación
 export type BloqueContenido = 
-  | { tipo: 'texto' | 'imagen' | 'subtitulo'; contenido: string }
-  | { tipo: 'lista'; contenido: string[] };
+  | { tipo: 'texto' | 'subtitulo'; contenido: string }
+  | { tipo: 'lista'; contenido: string[] }
+  | { tipo: 'imagen'; contenido: any };
 
 
 // estructura completa del tema
@@ -32,7 +33,7 @@ export default function TemaTemplate({ data }: TemaTemplateProps) {
           if (bloque.tipo === 'imagen') {
             return (
               <View key={index} style={styles.imageContainer}>
-                <Image source={{ uri: bloque.contenido }} style={styles.image} />
+                <Image source={bloque.contenido} style={styles.image} resizeMode="contain" />
               </View>
             );
           }

@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
     width: "100%",
     height: 180,
     borderRadius: 8,
-    backgroundColor: "#0F172A",
+    backgroundColor: "transparent",
     alignItems: "center",
     justifyContent: "center",
     marginVertical: 16,
@@ -53,7 +53,7 @@ export const styles = StyleSheet.create({
   },
   image: {
     width: "100%",
-    height: "100%",
+    height: 190,
     resizeMode: "contain",
   },
 

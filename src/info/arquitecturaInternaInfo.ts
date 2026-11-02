@@ -26,6 +26,10 @@ export const arquitecturaInternaData: TemaData = {
       ],
     },
     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/1.2kernel.png')
+    },
+    {
       tipo: "subtitulo",
       contenido: "1.2.2. Capa de Servicios del Sistema",
     },
@@ -34,5 +38,11 @@ export const arquitecturaInternaData: TemaData = {
       contenido:
         "En lugar de cargar servicios pesados en la memoria, ChromeOS utiliza pequeños programas en segundo plano que son conocidos como demonios o daemons. Estos programas se encargan de tareas específicas y se comunican entre sí utilizando un canal de mensajes interno del sistema llamado D-Bus.",
     },
+    {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/tab1serv.png')
+    },
+    
   ],
+  
 };
