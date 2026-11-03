@@ -37,6 +37,10 @@ export const anomaliasData: TemaData = {
       contenido:require('../../assets/images/tabIcons/2.5.png')
     },
     {
+      tipo: "imagen",
+      contenido: require("../../assets/images/tabIcons/2.6.1.png"),
+    },
+    {
       tipo: "subtitulo",
       contenido: "2.6.2 Inanición (Starvation)",
     },

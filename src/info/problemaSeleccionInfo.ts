@@ -24,6 +24,10 @@ export const problemaSeleccionData: TemaData = {
       contenido:require('../../assets/images/tabIcons/2.4.png')
     },
     {
+      tipo: "imagen",
+      contenido: require("../../assets/images/tabIcons/2.3.1.png"),
+    },
+    {
       tipo: "subtitulo",
       contenido: "2.3.2. La Sección Crítica",
     },

@@ -39,6 +39,10 @@ export const arquitecturaMultitareaData: TemaData = {
       contenido:require('../../assets/images/tabIcons/2.2.png')
     },
     {
+      tipo: "imagen",
+      contenido: require("../../assets/images/tabIcons/2.1.1.png"),
+    },
+    {
       tipo: "subtitulo",
       contenido: "2.1.2 Hilos (Threads) y Multihilos",
     },
@@ -72,9 +76,9 @@ export const arquitecturaMultitareaData: TemaData = {
         "Transferir el control de ejecución al nuevo contador de programa.",
       ],
     },
-     {
-      tipo:"imagen",
-      contenido:require('../../assets/images/tabIcons/2.3.png')
+    {
+      tipo: "imagen",
+      contenido: require("../../assets/images/tabIcons/2.1.3.png"),
     },
   ],
 };
