@@ -35,6 +35,10 @@ export const arquitecturaMultitareaData: TemaData = {
       ],
     },
     {
+      tipo: "imagen",
+      contenido: require("../../assets/images/tabIcons/2.1.1.png"),
+    },
+    {
       tipo: "subtitulo",
       contenido: "2.1.2 Hilos (Threads) y Multihilos",
     },
@@ -67,6 +71,10 @@ export const arquitecturaMultitareaData: TemaData = {
         "Cargar el contexto almacenado en el PCB del nuevo proceso hacia los registros de la CPU.",
         "Transferir el control de ejecución al nuevo contador de programa.",
       ],
+    },
+    {
+      tipo: "imagen",
+      contenido: require("../../assets/images/tabIcons/2.1.3.png"),
     },
   ],
 };

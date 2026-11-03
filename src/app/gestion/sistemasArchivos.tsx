@@ -1,7 +1,6 @@
-//sistemasArchivosData
 import PlantillaTema from "../../componentes/PlantillaTema";
-import { sistemasArchivosData } from "../../info/sistArchivosInfo";
+import { sistemasArchivosData } from "../../info/sistemasArchivosInfo";
 
-export default function SistemaArchivosScreen() {
+export default function SistemasArchivosScreen() {
   return <PlantillaTema data={sistemasArchivosData} />;
 }

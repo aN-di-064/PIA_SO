@@ -33,6 +33,10 @@ export const anomaliasData: TemaData = {
         "Los sistemas operativos modernos gestionan el interbloqueo mediante tres enfoques principales: la prevención (diseñar el sistema para invalidar estructuralmente al menos una de las cuatro condiciones de Coffman), la evitación (evaluar dinámicamente las solicitudes de recursos mediante algoritmos matemáticos como el Algoritmo del Banquero para garantizar que el sistema permanezca siempre en un estado seguro), y la detección y recuperación (permitir que ocurra el interbloqueo para luego detectarlo mediante grafos de asignación y recuperar el sistema abortando procesos o expropiando recursos).",
     },
     {
+      tipo: "imagen",
+      contenido: require("../../assets/images/tabIcons/2.6.1.png"),
+    },
+    {
       tipo: "subtitulo",
       contenido: "2.6.2 Inanición (Starvation)",
     },

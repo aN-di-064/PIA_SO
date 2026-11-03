@@ -23,6 +23,10 @@ const subtemasArquitectura = [
     id: "Utilerias",
     title: "1.5. Utilerías del Sistema y Diagnóstico Interno",
   },
+  {
+    id: "arquitecturaConclusion",
+    title: "Conclusión de Arquitectura, Componentes y Diseño",
+  },
 ];
 
 export default function ArquitecturaIndex() {
