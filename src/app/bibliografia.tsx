@@ -1,9 +1,6 @@
-import { Text, View } from "react-native";
+import TemaTemplate from "../componentes/PlantillaTema";
+import { bibliografiaData } from "../info/bibliografiaInfo";
 
-export default function Pantalla() {
-  return (
-    <View>
-      <Text>Contenido</Text>
-    </View>
-  );
+export default function BibliografiaScreen() {
+  return <TemaTemplate data={bibliografiaData} />;
 }

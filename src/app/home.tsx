@@ -3,6 +3,7 @@ import { SafeAreaView, ScrollView, Text, View } from "react-native";
 import { styles } from "../styles/index.styles";
 
 const topics = [
+  { id: "introduccion", title: "Introducción" },
   { id: "historia", title: "Evolución de ChromeOS" },
   {
     id: "arquitectura",

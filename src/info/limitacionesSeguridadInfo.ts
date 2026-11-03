@@ -34,6 +34,10 @@ export const limitacionesSeguridadData: TemaData = {
         "Amplitud de permisos: Una extensión con el permiso “read and change all your data on the websites you visit” puede leer el texto que se escribe en los formularios, interceptar tokens de autenticación y modificar elementos visuales de la página sin necesidad de vulnerar el sistema operativo.",
       ],
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/4.11.png')
+    },
     {
       tipo: "subtitulo",
       contenido: "4.12.4 Redes inseguras y ataques de capa 2",

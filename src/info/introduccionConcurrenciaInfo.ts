@@ -27,5 +27,9 @@ export const introduccionConcurrenciaData: TemaData = {
       contenido:
         "En los sistemas multiprocesador y multicorte actuales, la concurrencia deja de ser una mera ilusión de alternancia y se convierte en una realidad de ejecución paralela. Sin embargo, este avance introduce desafíos colosales en términos de diseño de software. Múltiples hilos de ejecución compiten constantemente por acceder a estructuras de datos compartidas, dispositivos de E/S y zonas de memoria principal. Sin mecanismos estrictos de control de concurrencia, los sistemas operativos colapsarían debido a corrupciones de datos, condiciones de carrera e interbloqueos catastróficos.",
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/2.1.png')
+    },
   ],
 };

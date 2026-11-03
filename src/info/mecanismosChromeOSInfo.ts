@@ -4,15 +4,9 @@ export const mecanismosChromeOSData: TemaData = {
   id: "mecanismosChromeOS",
   titulo: "4.8 Mecanismos de seguridad de ChromeOS",
   bloques: [
-    {
-      tipo: "lista",
-      contenido: [
-        "1. Hardware de confianza: Chip Titan C / TPM Root of Trust de solo lectura. Función: Valida la firma criptográfica.",
-        "2. Arranque verificado (Verified Boot): Firmware RO → Bootloader → Kernel → dm-verity (sistema de archivos). Función: Carga un sistema inmutable.",
-        "3. Sistema operativo base ChromeOS: Partición de solo lectura (ro) / Actualizaciones A/B. Función: Aísla los contextos de ejecución.",
-        "4a. Sandboxing: Renderer (Chrome): seccomp, namespaces. Función: Aislamiento de procesos del navegador.",
-        "4b. Virtualización: ARCVM (Android) / Termina VM: Aislamiento KVM / crosvm. Función: Aislamiento mediante máquinas virtuales.",
-      ],
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/tab4.png')
     },
     {
       tipo: "subtitulo",
@@ -49,6 +43,10 @@ export const mecanismosChromeOSData: TemaData = {
         "cgroups (Control Groups): Limitan el consumo de CPU, memoria y ancho de banda para evitar ataques locales de denegación de servicio.",
       ],
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/4.7.png')
+    },
 
     {
       tipo: "subtitulo",
@@ -65,6 +63,10 @@ export const mecanismosChromeOSData: TemaData = {
         "Transición atómica: Cuando la instalación en el conjunto B termina y se valida criptográficamente, el sistema lo marca como activo para el siguiente reinicio. Al reiniciar, el equipo arranca directamente en la nueva versión en cuestión de segundos, sin largas esperas por la instalación.",
         "Reversión instantánea (Rollback Protection): Si la nueva partición falla en la verificación criptográfica del arranque o cae en un ciclo de fallos de inicio (boot loop), el hardware y el bootloader regresan automáticamente a la partición anterior que sí funcionaba (A). Además, el chip de seguridad impide volver a versiones vulnerables más viejas gracias a contadores de versión anti-rollback por hardware.",
       ],
+    },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/4.8.png')
     },
     {
       tipo: "subtitulo",
@@ -129,6 +131,10 @@ export const mecanismosChromeOSData: TemaData = {
         "Cifrado de claves de usuario: Las llaves criptográficas del sistema de archivos del usuario (cryptohome) se derivan combinando la contraseña o el PIN con un secreto generado dentro del chip de seguridad. Por eso los datos solo se pueden descifrar en ese dispositivo físico en particular y después de validar la autenticación.",
         "Protección contra ataques de fuerza bruta: El chip lleva por hardware el conteo de intentos fallidos de contraseña y PIN. Si detecta varios intentos incorrectos seguidos, impone retrasos temporales que crecen de forma exponencial (rate limiting) o bloquea ese método de acceso, con lo que los ataques automatizados de diccionario dejan de ser efectivos.",
       ],
+    },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/4.9.png')
     },
   ],
 };

@@ -24,6 +24,10 @@ export const gestionData: TemaData = {
     "Seguridad: El aislamiento de procesos (sandboxing) que se describió en la sección 4.8 depende de que cada proceso tenga su propio espacio de direcciones. Una mala administración de memoria no solo vuelve lento el equipo; también puede debilitar ese aislamiento. "
      ]
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/3.1.png')
+    },
     { 
       tipo: "texto", 
       contenido: "Un administrador de memoria debe cumplir cinco requisitos básicos. Así se reflejan en Chrome OS: "
@@ -37,6 +41,10 @@ export const gestionData: TemaData = {
         "Organización lógica. Los programas se ven como módulos (código, datos, pila) con permisos distintos: el código es de solo lectura y ejecución, y los datos son modificables.",
      ]
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/3.2.png')
+    },
     {
         tipo: "subtitulo",
         contenido: "Memoria principal (Memoria de Acesso Aleatorio, RAM)"
@@ -44,6 +52,10 @@ export const gestionData: TemaData = {
     {
         tipo: "texto",
         contenido: "La memoria principal (RAM) es el nivel rápido pero volátil de la jerarquía de memoria: guarda los programas y datos en uso y se pierde al apagar el equipo. El almacenamiento secundario (eMMC o SSD, que se trata en la sección 3.2) es más lento pero permanente. En muchos Chromebook con procesador ARM, la memoria de video sale de la misma RAM y no se puede recuperar, y el sistema lo toma en cuenta al configurar su memoria."
+    },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/3.3.png')
     },
     {
         tipo: "subtitulo",
@@ -53,6 +65,10 @@ export const gestionData: TemaData = {
         tipo: "texto",
         contenido: "Los sistemas antiguos dividían la RAM en particiones fijas, sencillas de implementar, pero con fragmentación interna porque un proceso pequeño ocupaba una partición completa, o en particiones dinámicas, donde cada proceso recibe justo lo que necesita, pero van quedando huecos pequeños dispersos (fragmentación externa) que obligan a compactar la memoria, una operación costosa. Para elegir en qué hueco colocar un proceso se usaban estrategias como mejor ajuste, primer ajuste y siguiente ajuste. Hoy ningún sistema operativo importante usa estos esquemas de forma pura; Chrome OS, igual que Linux, usa paginación.  En la paginación la RAM se divide en bloques de tamaño fijo llamados marcos, y cada proceso se divide en páginas del mismo tamaño. Las páginas de un proceso pueden quedar en marcos que no son contiguos, y el sistema guarda una tabla de páginas por proceso que indica en qué marco está cada una. Así desaparece la fragmentación externa y solo queda una pequeña fragmentación interna en la última página de cada proceso. Una dirección virtual se compone de un número de página y un desplazamiento dentro de ella. La segmentación pura, en cambio, casi no se usa hoy, y Chrome OS tampoco la emplea. "
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/3.4.png')
+    },
     {
         tipo: "subtitulo",
         contenido: "Tablas de páginas multinivel y TLB"
@@ -60,6 +76,10 @@ export const gestionData: TemaData = {
     {
         tipo: "texto",
         contenido: "Un espacio de direcciones de 64 bits necesitaría una tabla de páginas enorme si fuera de un solo nivel, por lo que Linux la organiza en varios: una estructura clásica de tres niveles (directorio de páginas, directorio intermedio y tabla de páginas), que en los kernels actuales para 64 bits se amplía a cuatro o cinco. Solo se crean las partes que el proceso realmente usa. Para no consultar la tabla en memoria en cada acceso, el procesador guarda las traducciones recientes en una caché especial llamada TLB (translation lookaside buffer); si la traducción está ahí, el acceso es mucho más rápido."
+    },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/3.5.png')
     },
     {
         tipo: "subtitulo",
@@ -88,6 +108,10 @@ export const gestionData: TemaData = {
         tipo: "texto",
         contenido: "La memoria virtual permite que un proceso se ejecute, aunque solo una parte de él esté en la memoria principal. La parte que realmente está en RAM se llama conjunto residente; la memoria que ve el programa es la virtual, y la RAM física es la memoria real. Esto trae dos ventajas: caben más procesos a la vez y un proceso puede ser más grande que la memoria física. Funciona gracias al principio de proximidad: en un lapso corto, un proceso tiende a usar solo unas cuantas de sus páginas."
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/3.6.png')
+    },
     {
         tipo: "subtitulo",
         contenido: "Fallo de página y paginación por demanda"
@@ -103,6 +127,10 @@ export const gestionData: TemaData = {
     {
         tipo: "texto",
         contenido: "En un sistema clásico, cuando la RAM se llena, las páginas menos usadas se mandan al disco (swap). Chrome OS no hace swap hacia el almacenamiento por defecto. Según la documentación de diseño del sistema, hay tres motivos: las escrituras constantes desgastarían la memoria flash o el SSD, cifrar el swap para proteger los datos gastaría procesador y batería, y se busca que el sistema se mantenga rápido hasta que realmente se agote la memoria. En su lugar usa zram, un módulo del kernel que crea un dispositivo de bloques dentro de la RAM donde los datos se guardan comprimidos. Se configura como área de swap, así que las páginas que salen de la memoria normal se comprimen y se quedan en la RAM. Con una compresión de alrededor de 2 a 1, cada página comprimida libera aproximadamente la mitad de su espacio. El script de inicialización de Chrome OS calcula el tamaño de zram a partir de la RAM total: 1.5 veces la RAM en la mayoría de los equipos y 1 vez en los de arquitectura ARM, donde la memoria gráfica no es recuperable. También define los márgenes de memoria baja (alrededor del 5.2 % de la RAM para el nivel crítico y del 40 % para el moderado) y una cantidad mínima de caché de archivos que debe conservarse. El script incluye una ruta para swap en disco cifrado pensada para un modelo muy específico de NVMe, pero en el código revisado esa opción está desactivada. Dicho con los términos de la teoría, zram funciona como una “memoria secundaria” que en realidad es más rápida, porque vive en RAM."
+    },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/3.7.png')
     },
     {
         tipo: "subtitulo",

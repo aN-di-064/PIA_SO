@@ -24,6 +24,10 @@ export const seguridadConexionesDetalleData: TemaData = {
       tipo: "texto",
       contenido: "Un certificado digital relaciona una clave pública con una entidad o dominio web específico, siguiendo el estándar X.509. ChromeOS cuenta con un almacén raíz de certificados de confianza (Root CA Store) que administra Chrome. Durante el protocolo de enlace TLS (TLS Handshake), el sistema revisa la cadena de confianza, la vigencia, los nombres de dominio alternativos (SAN) y si el certificado fue revocado, para lo cual usa protocolos como CRL u OCSP Stapling. Cuando la validación falla (por ejemplo, con un certificado autofirmado que no se reconoce, vencido o alterado), ChromeOS corta la conexión y muestra una advertencia de seguridad que impide continuar, con el fin de evitar ataques de interceptación.",
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/4.5.png')
+    },
     {
       tipo: "subtitulo",
       contenido: "4.7.2 Cifrado de comunicaciones y protección de datos durante la transmisión",
@@ -40,6 +44,10 @@ export const seguridadConexionesDetalleData: TemaData = {
         "DNS sobre HTTPS (DoH): ChromeOS integra DNS seguro, que envía las consultas de resolución de nombres por conexiones HTTPS cifradas en el puerto 443. Así, ni los proveedores de servicios de internet (ISP) ni personas malintencionadas dentro de la red local pueden ver qué dominios consulta el usuario, ni suplantar sitios mediante envenenamiento DNS (DNS Poisoning).",
         "Aleatorización de direcciones MAC: En redes inalámbricas no administradas, el subsistema de red de ChromeOS (shill) puede ir cambiando la dirección MAC con la que se asocia al punto de acceso. Esto evita que el equipo sea rastreado en redes públicas, tanto por su ubicación como a lo largo del tiempo.",
       ],
+    },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/4.6.png')
     },
     {
       tipo: "subtitulo",

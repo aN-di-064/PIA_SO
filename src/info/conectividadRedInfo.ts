@@ -37,6 +37,10 @@ export const conectividadRedData: TemaData = {
       contenido: "El usuario puede administrar las conexiones de red desde la configuración de ChromeOS. Desde ahí es posible activar o desactivar el Wi-Fi, agregar redes, configurar DNS, utilizar un proxy o establecer una conexión VPN. En escuelas y empresas, la administración puede realizarse desde la consola de administración de Google. Desde ella es posible configurar redes Wi-Fi, Ethernet y VPN, instalar certificados y establecer qué usuarios o dispositivos pueden utilizarlas. Google indica, por ejemplo, que cada unidad organizativa puede tener hasta 300 redes      Wi-Fi preconfiguradas.",
     },
     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/4.1.png')
+    },
+    {
       tipo: "subtitulo",
       contenido: "4.1.5 Redes públicas y privadas",
     },

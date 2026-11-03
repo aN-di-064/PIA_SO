@@ -21,6 +21,10 @@ export const amenazasRedData: TemaData = {
       contenido: "En este ataque el delincuente se coloca en medio de la comunicación entre el usuario y el sitio que visita, y de esa forma puede ver o modificar los datos mientras viajan. Es difícil de detectar porque la información se intercepta a mitad del camino, entre el dispositivo y el router, sin que la víctima lo note.",
     },
     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/4.2.png')
+    },
+    {
       tipo: "subtitulo",
       contenido: "4.2.3 Redes Wi-Fi maliciosas",
     },

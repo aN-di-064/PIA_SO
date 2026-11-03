@@ -19,6 +19,10 @@ export const problemaSeleccionData: TemaData = {
       contenido:
         "Una condición de carrera ocurre cuando dos o más procesos leen y escriben en un dato compartido de manera concurrente, y el resultado final de la operación depende del orden exacto en que se intercalen las ejecuciones del procesador. Como la sincronización de las instrucciones a nivel de hardware depende de interrupciones impredecibles, el comportamiento del programa se vuelve no determinista y propenso a fallos erráticos e imposibles de replicar fácilmente.",
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/2.4.png')
+    },
     {
       tipo: "subtitulo",
       contenido: "2.3.2. La Sección Crítica",

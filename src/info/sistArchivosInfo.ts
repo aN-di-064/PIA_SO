@@ -2,11 +2,15 @@ import type { TemaData } from "../componentes/PlantillaTema";
 
 export const sistemasArchivosData: TemaData = {
   id: "sistArchivos",
-  titulo: "Sistemas de Archivos, Estructura e Implementación en Chrome OS",
+  titulo: "Sistemas de Archivos: Estructura e Implementación en Chrome OS",
   bloques: [
     {
       tipo: "texto",
       contenido: "El sistema de archivos actúa como la capa de abstracción mas completa entre los dispositivos de bloques sin procesar y la visión lógica de datos que demandan el usuario y los entornos de ejecución. A nivel teórico de sistemas operativos, existen tres metodologías fundamentales para asignar bloques a los archivos en disco: la asignación contigua, la asignación enlazada y la asignación indexada. La asignación contigua ubica los datos en sectores estrictamente adyacentes, lo cual proporciona una velocidad de lectura secuencial óptima pero produce fragmentación externa severa y complica el crecimiento dinámico de los archivos. Por su parte, la asignación enlazada conecta cada bloque con el siguiente a través de punteros integrados en los propios datos, eliminando la fragmentación externa pero degradando drásticamente el acceso aleatorio y elevando la vulnerabilidad ante la corrupción de un único puntero. La asignación indexada subsana las carencias anteriores reuniendo todas las referencias a los bloques de datos en un registro específico llamado inodo. "
+    },
+    {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/tab3.png')
     },
     {
       tipo: "texto",
@@ -55,6 +59,10 @@ export const sistemasArchivosData: TemaData = {
     {
         tipo:"texto",
         contenido:"Chrome OS minimiza la dependencia del almacenamiento local persistente. El explorador de archivos integra el almacenamiento físico local con la infraestructura de almacenamiento en la nube de Google Drive como si formara parte del mismo árbol de directorios. Los archivos generados se guardan y sincronizan automáticamente en centros de datos remotos, permitiendo que la pérdida, rotura o restablecimiento completo de fábrica del equipo no comprometa la integridad ni la disponibilidad de los documentos del usuario."
-    }
+    },
+    {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/3.8.png')
+    },
   ]
 }

@@ -66,5 +66,9 @@ export const perdidaRoboData: TemaData = {
         "Inscripción forzada (Forced Re-enrollment): Aunque un ladrón formatee físicamente el almacenamiento o recupere todo el sistema operativo desde una memoria USB externa, durante la configuración inicial el hardware consulta a los servidores de Google y vuelve a inscribir el equipo automáticamente en el dominio institucional. De esta forma no puede reutilizarse como un Chromebook comercial o personal.",
       ],
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/4.10.png')
+    },
   ],
 };

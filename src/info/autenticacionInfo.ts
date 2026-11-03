@@ -44,6 +44,10 @@ export const autenticacionData: TemaData = {
       tipo: "texto",
       contenido: "La verificación en dos pasos agrega una segunda comprobación al iniciar sesión, como un código, una notificación en el celular o una llave de seguridad física. Así, aunque alguien robe la contraseña, no puede entrar sin el segundo paso. Las llaves de seguridad son de las opciones más fuertes porque solo funcionan con el sitio real para el que fueron registradas, lo que las hace resistentes al phishing: aunque el usuario entre a una página falsa, la llave no entrega la autenticación. ChromeOS las soporta para iniciar sesión en servicios web y el sistema está preparado para usarlas también como método de acceso al equipo.",
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/4.4.png')
+    },
     {
       tipo: "subtitulo",
       contenido: "4.5.6 Control de acceso a redes",

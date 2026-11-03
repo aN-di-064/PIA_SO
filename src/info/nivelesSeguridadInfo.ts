@@ -65,5 +65,9 @@ export const nivelesSeguridadData: TemaData = {
         "Actualizaciones y controles de seguridad: Definir los canales de actualización (Canal Estable y Canal de Soporte Extendido, LTC), retener versiones específicas para validar la compatibilidad y monitorear el inventario de vulnerabilidades.",
       ],
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/tab5.png')
+    },
   ],
 };

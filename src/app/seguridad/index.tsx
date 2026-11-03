@@ -9,7 +9,7 @@ const subtemas = [
   { id: "intrusosAtaques", title: "4.4 Tipos de intrusos y ataques" },
   { id: "autenticacion", title: "4.5 Autenticación y control de acceso" },
   { id: "seguridadConexiones", title: "4.6 Seguridad de las conexiones" },
-  { id: "seguridadConexionesDetalle", title: "4.7 Seguridad de las conexiones" },
+  { id: "seguridadConexionesDetalle", title: "4.7 Seguridad de las conexiones II" },
   { id: "mecanismosSeguridad", title: "4.8 Mecanismos de seguridad de ChromeOS" },
   { id: "perdidaRobo", title: "4.9 Seguridad del dispositivo frente a pérdida o robo" },
   { id: "nivelesSeguridad", title: "4.10 Niveles de seguridad según el entorno" },
