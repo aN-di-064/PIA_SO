@@ -16,6 +16,8 @@ const subtemas = [
   { id: "administracionRiesgos", title: "4.11 Prevención y administración de riesgos" },
   { id: "limitacionesSeguridad", title: "4.12 Problemas y limitaciones de seguridad" },
   { id: "buenasPracticas", title: "4.13 Soluciones y buenas prácticas" },
+   { id: "conclusionredes", title: "Conclusión de Redes y seguridad: sistemas distribuidos" },
+   { id: "AF4", title: "Actividad Fundamental 4." },
 ];
 
 export default function SeguridadIndex() {

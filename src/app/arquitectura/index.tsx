@@ -27,6 +27,10 @@ const subtemasArquitectura = [
     id: "arquitecturaConclusion",
     title: "Conclusión de Arquitectura, Componentes y Diseño",
   },
+  {
+    id: "AF1",
+    title: "Actividad Fundamental 1.",
+  },
 ];
 
 export default function ArquitecturaIndex() {

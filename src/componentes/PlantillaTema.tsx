@@ -1,11 +1,12 @@
-import { Image, SafeAreaView, ScrollView, Text, View } from "react-native";
+import { Image, SafeAreaView, ScrollView, Text, View, TouchableOpacity, Linking } from "react-native";
 import { styles } from "../styles/temas";
 
 // Definimos los bloques de infrormación
 export type BloqueContenido = 
   | { tipo: 'texto' | 'subtitulo'; contenido: string }
   | { tipo: 'lista'; contenido: string[] }
-  | { tipo: 'imagen'; contenido: any };
+  | { tipo: 'imagen'; contenido: any }
+  | { tipo: 'boton_enlace'; contenido: { textoBoton: string; url: string } };
 
 
 // estructura completa del tema
@@ -40,6 +41,18 @@ export default function TemaTemplate({ data }: TemaTemplateProps) {
           if (bloque.tipo === 'subtitulo') {
             return <Text key={index} style={styles.sectionHeader}>{bloque.contenido}</Text>;
           }
+          if (bloque.tipo === 'boton_enlace') {
+          return (
+            <TouchableOpacity 
+              key={index} 
+              style={styles.botonEnlace} 
+              onPress={() => Linking.openURL(bloque.contenido.url)}
+            >
+              <Text style={styles.textoBotonEnlace}>{bloque.contenido.textoBoton}</Text>
+            </TouchableOpacity>
+          );
+        }
+          
 
           if (bloque.tipo === 'lista' && Array.isArray(bloque.contenido)) {
          return (
@@ -49,6 +62,8 @@ export default function TemaTemplate({ data }: TemaTemplateProps) {
             <Text style={styles.bullet}>•</Text>
             <Text style={styles.bulletText}>{item}</Text>
         </View>
+
+        
       ))}
     </View>
   );

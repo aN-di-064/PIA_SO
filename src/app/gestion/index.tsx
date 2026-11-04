@@ -27,6 +27,10 @@ const subtemas = [
     id: "conclusionGestion",
     title: "Conclusión de Gestión de Memoria y Archivos",
   },
+   {
+    id: "AF3",
+    title: "Actividad Fundamental 3.",
+  },
 ];
 
 export default function GestionIndex() {

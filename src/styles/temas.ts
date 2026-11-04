@@ -79,4 +79,22 @@ listContainer: {
     lineHeight: 24,
     textAlign: 'justify',
   },
+  botonEnlace: {
+    backgroundColor: '#0056D2', // Azul institucional/tecnológico
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginVertical: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3, // Sombra para Android
+  },
+  textoBotonEnlace: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
 });
