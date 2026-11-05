@@ -15,5 +15,9 @@ export const contextoData: TemaData = {
     tipo:"texto",
     contenido: "En este contexto de transformación digital, Google conceptualizó un sistema operativo radicalmente diferente. Lejos de competir directamente con los gigantes tradicionales del software de escritorio mediante la acumulación de funciones locales complejas, la compañía apostó por un sistema ligero, rápido y centrado en la web. Así nació Chrome OS, un sistema operativo diseñado originalmente para redefinir la forma en que los usuarios interactúan con la información, priorizando la conectividad permanente, la seguridad multicapa y la simplicidad operativa.",
   },
+  {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/chromeos.jpg')
+    },
   ]
 }
