@@ -12,6 +12,10 @@ export const seguridadConexionesData: TemaData = {
       tipo: "texto",
       contenido: "HTTPS es la versión segura del protocolo con el que funcionan las páginas web. Cifra la información que se envía entre el navegador y el sitio, de modo que si alguien la intercepta no puede entenderla. Para saber que el sitio es verdadero se usan los certificados digitales, que son documentos emitidos por entidades de confianza que comprueban que una página pertenece a quien dice ser. Cuando un certificado está vencido, no coincide con el sitio o no es confiable, Chrome muestra una pantalla de advertencia antes de continuar. Esto ayuda a frenar tanto sitios falsos como ataques de intermediario.",
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/HTTPS.png')
+    },
     {
       tipo: "subtitulo",
       contenido: "4.6.2 Cifrado de comunicaciones y protección de datos durante la transmisión",

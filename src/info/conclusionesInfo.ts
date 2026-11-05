@@ -15,7 +15,7 @@ export const conclusionesData: TemaData = {
       tipo: "boton_enlace",
       contenido: {
         textoBoton: "Conclusiones individuales",
-        url: "https://drive.google.com/file/d/1HuXCfh7HVn7Xvjcs2NWi-lyEFUIzxIHW/view?usp=sharing",
+        url: "https://drive.google.com/file/d/1HL1ujfMR-Ieje2FfFP_42Er8st7v2815/view?usp=drive_link",
       },
     },
   ],

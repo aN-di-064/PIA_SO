@@ -26,6 +26,10 @@ export const almacenamientoSecData: TemaData = {
         "Tiempo de transferencia: pasar los datos al búfer del controlador.",
       ],
     },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/hdd3.4.jpg')
+    },
     {
       tipo: "subtitulo",
       contenido: "3.4.2 Planificación de disco",
@@ -59,6 +63,10 @@ export const almacenamientoSecData: TemaData = {
         "Tecnología: celdas flash NAND, que pueden ser SLC, MLC, TLC o QLC.",
         "Ventaja principal: tiempos de acceso casi planos y uniformes, sin importar dónde esté el bloque lógico solicitado.",
       ],
+    },
+     {
+      tipo:"imagen",
+      contenido:require('../../assets/images/tabIcons/ssd3.4.png')
     },
     {
       tipo: "subtitulo",
