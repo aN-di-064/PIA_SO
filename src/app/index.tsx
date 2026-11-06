@@ -109,7 +109,7 @@ headerContainer: {
     width: '100%',
   },
   headerTextBold: {
-    color: '#1E1E1E', // Mantengo el color oscuro que se ve en tu captura
+    color: '#1E1E1E', 
     fontSize: 20, 
     fontWeight: 'bold',
     textAlign: 'center',
@@ -160,7 +160,7 @@ headerContainer: {
     marginBottom: -25, // Acerca la segunda tabla
   },
   tablaPequena: {
-    width: '100%',
+    width: '98%',
     height: 150, 
     marginBottom: 40,
   },
