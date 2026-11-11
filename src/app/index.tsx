@@ -160,7 +160,7 @@ headerContainer: {
     marginBottom: -25, // Acerca la segunda tabla
   },
   tablaPequena: {
-    width: '98%',
+    width: '99%',
     height: 150, 
     marginBottom: 40,
   },
